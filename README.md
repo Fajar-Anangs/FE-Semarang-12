@@ -4,8 +4,6 @@
 
 EdUTBK adalah sebuah platform belajar online.
 
-Mari Kita Coba tes.
-
 Project Leader : Fajar Anang Saputra
 Front-End Engineer :
 
