@@ -3,9 +3,8 @@
 # EdUTBK - Situs Belajar Online
 
 EdUTBK adalah sebuah platform belajar online.
-Fajar
 
-Group 12 RevoU section Semarang
+Mari Kita Coba tes.
 
 Project Leader : Fajar Anang Saputra
 Front-End Engineer :
