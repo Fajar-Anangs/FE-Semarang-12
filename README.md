@@ -1,8 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0wBSnje4)
 
-# EdUTBK - Situs Belajar Online
+# 🖥️ EdUTBK - Situs Belajar Online Persiapan Memasuki PTN
 
-EdUTBK adalah sebuah platform belajar online.
+Selamat Datang di repositori web EdUTBK! EdUTBK adalah platform yang bergerak di bidang pendidikan nonformal berbasis teknologi asal Indonesia dalam persiapan memasuki perguruan tinggi negeri. <br>
 
 Project Leader : Fajar Anang Saputra
 Front-End Engineer :
