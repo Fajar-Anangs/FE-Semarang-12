@@ -2,7 +2,7 @@
 
 # EdUTBK - Situs Belajar Online
 
-EdUTBK adalah sebuah platform belajar online
+EdUTBK adalah sebuah platform belajar online.
 
 Group 12 RevoU section Semarang
 
