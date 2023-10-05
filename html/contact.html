@@ -5,13 +5,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tech2 etc Tutorial</title>
-
+        <link rel="icon" href="../images/EduTBK1.png" type="image/png">
+        <title>EdUTBK</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-
         <link rel="stylesheet" href="../css/style.css">
-
-
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -21,7 +18,7 @@
 
         <!-- Navigation -->
         <nav>
-            <img src="../images/logo.svg" alt="">
+            <img src="../images/EduTBK.png" alt="">
             <div class="navigation">
                 <ul>
                     <i id="menu-close" class="fas fa-time"></i>
@@ -30,6 +27,8 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="course.html">Courses</a></li>
                     <li><a class="active" href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="login-btn"><i class="fas fa-user"></i>Login</a></li>
+                    <li><a href="login.html" class="daftar-btn">Daftar</a></li>
                 </ul>
                 <img id="menu-btn" src="../images/menu.png" alt="">
           </div>
@@ -81,19 +80,21 @@
             <div class="form">
                 <h4>Let's Connect</h4>
                 <p>Integer at lorem eget diam facilisis lacinia ac id massa.</p>
-                <div class="form-row">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="Email">
-                </div>
-                <div class="form-col">
-                    <input type="text" placeholder="Subject">
-                </div>
-                <div class="form-col">
-                    <textarea name="" id="" cols="30" rows="8" placeholder="How can we help?"></textarea>
-                </div>
-                <div class="form-col">
-                    <button>Send Message</button>
-                </div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" id="nama" name="nama">
+                        <input type="text" placeholder="Email" id="email" name="email">
+                    </div>
+                    <div class="form-col">
+                        <input type="text" placeholder="Subject" id="subject" name="subject">
+                    </div>
+                    <div class="form-col">
+                        <textarea cols="30" rows="8" placeholder="How can we help?" id="pesan" name="pesan"></textarea>
+                    </div>
+                    <div class="form-col">
+                        <button type="submit" value="Send Message">Send Message</button>
+                    </div>
+                </form>
             </div>
         </section>
 
@@ -159,41 +160,9 @@
             </div>
         </footer>
 
-        <script src="js/index.js">
-            // $('#menu-btn').click(function(){
-            //     $('nav .navigation ul').addClass('active')
-            // });
-            // $('#menu-close').click(function(){
-            //     $('nav .navigation ul').removeClass('active')
-            // });
-            
-            // /*---Time---*/
-            // var countDownDate = new Date("Oct 10, 2023 00:00:00").getTime();
-            // var x = setInterval(function(){
-            //     var now = new Date().getTime();
-            //     var distance = countDownDate - now;
+        <!-- <script src="../js/index.js"></script> -->
+        <script src="../js/kirim.js"></script>
 
-            //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-            //     document.getElementById("days").innerHTML = days;
-            //     document.getElementById("hours").innerHTML = hours;
-            //     document.getElementById("minutes").innerHTML = minutes;
-            //     document.getElementById("seconds").innerHTML = seconds;
-                
-            //     if(distance < 0){
-            //         clearInterval(x);
-            //         document.getElementById("days").innerHTML = "00";
-            //         document.getElementById("hours").innerHTML = "00";
-            //         document.getElementById("minutes").innerHTML = "00";
-            //         document.getElementById("seconds").innerHTML = "00";
-            //     }
-            // },1000);
-            
-        </script>
 
     </body>
-
 </html>
