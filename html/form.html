@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(44, 44, 80);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FDC93B;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button[type="submit"] {
+            background-color: rgb(44, 44, 80);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: rgb(44, 44, 80);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran Course</h1>
+        <form id="courseForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="course">Pilihan Course:</label>
+            <select id="course" name="course" required>
+                <option value="Literasi Bahasa">Literasi Bahasa</option>
+                <option value="Kemampuan Kuantitatif">Kemampuan Kuantitatif</option>
+                <option value="Penalaran Umum">Penalaran Umum</option>
+                <option value="Penalaran Matematika">Penalaran Matematika</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Javascript Beginner Course">Javascript Beginner Course</option>
+            </select>
+            
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+            
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </div>
+</body>
+</html>
