@@ -1,6 +1,7 @@
 function sendForm(event) {
     event.preventDefault(); // Mencegah perilaku default pengiriman formulir
-
+    
+    document.getElementById('contactForm').addEventListener('submit', sendForm);
     const form = document.getElementById('contactForm');
     const formData = {
         nama: form.elements.nama.value,
@@ -8,7 +9,7 @@ function sendForm(event) {
         subject: form.elements.subject.value,
         pesan: form.elements.pesan.value
     };
-
+    
     fetch('http://localhost:3001/api/contact', {
         method: 'POST',
         headers: {
@@ -31,7 +32,6 @@ function sendForm(event) {
     });
 }
 
-document.getElementById('contactForm').addEventListener('submit', sendForm);
 
 function registerUser() {
     // Mendapatkan nilai dari input fields
@@ -92,55 +92,33 @@ function registerUser() {
     });
   }
 
-  // Event listener untuk form submission
-document.getElementById('kursusForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Mencegah form dikirim secara default
+  const loginForm = document.getElementById("loginForm");
+
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
   
-    // Lakukan permintaan POST ke server untuk pendaftaran kursus
-    // Setelah berhasil, tangkap tokenCourse dari respons dan tampilkan di popup modal
-    fetch('/api/course', {
-      method: 'POST',
-      body: JSON.stringify({
-        nama: document.getElementById('nama').value,
-        email: document.getElementById('email').value,
-        course: document.getElementById('kursus').value,
-        tanggal: document.getElementById('tanggal').value
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.token) {
-        // Jika tokenCourse ada dalam respons, tampilkan di popup modal
-        openModal(data.token);
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+  
+      if (response.ok) {
+        // Login berhasil, lakukan tindakan sesuai kebutuhan
+        const data = await response.json();
+        console.log(data);
       } else {
-        // Handle kesalahan jika diperlukan
-        console.error('Gagal menerima tokenCourse dari server.');
+        // Login gagal, lakukan tindakan sesuai kebutuhan
+        console.error("Login gagal");
       }
-    })
-    .catch(error => {
-      // Handle kesalahan jika terjadi
-      console.error('Terjadi kesalahan dalam melakukan permintaan ke server:', error);
-    });
+    } catch (error) {
+      console.error("Terjadi kesalahan:", error);
+    }
   });
-  
-  // Fungsi untuk membuka modal
-  function openModal(generateToken) {
-    const modal = document.getElementById('generateTokenModal');
-    const generateTokenElement = document.getElementById('generateToken');
-  
-    generateTokenElement.textContent = generateToken;
-    modal.style.display = 'block';
-  }
-  
-  // Fungsi untuk menutup modal
-  function closeModal() {
-    const modal = document.getElementById('generateTokenModal');
-    modal.style.display = 'none';
-  }
-  
-  // Event listener untuk menutup modal saat tombol close diklik
-  document.querySelector('.close').addEventListener('click', closeModal);
   

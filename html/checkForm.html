@@ -29,32 +29,30 @@
         <div class="pendataan">
           <div class="pendataan-text">
             <h1>Cek Status Pendaftaran Kursus EduTBK</h1>
-            <p>Silahkan isi kode pendatan berjumlah 10 karakter acak, untuk mengetahui status pendataan anda. </p>
+            <p>Silahkan isi kode pendaftaran Anda (edutbk-nama-anda-kodeunik). </p>
             <div class="form-pendataan">
-              <form id="kursusCek" class="pendataan-con">
-                <label for="kodependataan">Kode Pendataan Anda:</label>
-                <input type="text" id="kodependataan" name="kodependataan"><br><br>
-                <input type="submit" value="Cek Status" onclick="kursusCek(event)">
-                <p><i class="fa-solid fa-file"></i>&nbsp; Status Pendaftaran Kursus.</p>
+              <form id="kursusCek" class="pendataan-con" onsubmit="kursusCek(event)">
+                <label for="kodependataan">Kode Pendaftaran Anda:</label>
+                <input type="text" id="kodependataan" name="kodependataan" required><br><br>
+                <input type="submit" value="Cek Status">
+                <p><i class="fa-solid fa-file"></i>&nbsp; Status Pendaftaran Kursus:</p>
                 <input type="text" id="status" name="status" readonly><br><br>
-                <p><i class="fa-solid fa-file"></i>&nbsp; Pilihan Kursus.</p>
                 <input type="hidden" id="idKursus" name="idKursus" />
-                <label for="judul">Pilihan Kursus:</label>
+                <label for="judul">Kursus yang diikuti:</label>
                 <input type="text" id="judul" name="judul" readonly><br><br>
-                <label for="judul">Keterangan Kursus:</label>
-                <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
                 <p><i class="fa-solid fa-file"></i>&nbsp; Data Diri Anda</p>
                 <label for="nama">Nama:</label>
                 <input type="text" id="nama" name="nama" readonly><br><br>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" readonly><br><br>
-                <label for="pesan">Pesan:</label><br>
-                <textarea id="pesan" name="pesan" rows="5" cols="50" readonly></textarea><br><br>
+                <label for="tanggal-terdaftar">Tanggal Terdaftar:</label><br>
+                <input type="text" id="tanggal-terdaftar" name="tanggal-terdaftar" readonly><br><br>
               </form>
             </div>
           </div>
         </div>
       </section>
+      
         
         <!-- Modal Course -->
         <div class="modal" id="generateTokenModal">
@@ -70,25 +68,31 @@
       <!-- Footer -->
       <footer>
         <div class="footer-col">
-            <h3>Top Products</h3>
-            <li>Manage Reputation</li>
-            <li>Power Tools</li>
-            <li>Maneged Website</li>
-            <li>Marketing Service</li>
+            <h3>Fitur Super</h3>
+            <li>edUTBKers Fondation</li>
+            <li>edUTBKers Q-Bank</li>
+            <li>edUTBKers Simulation</li>
+            <li>edUTBKers Tactics</li>
+            <li>edUTBKers Forum</li>
+            <li>edUTBKers Consulting</li>
         </div>
         <div class="footer-col">
-            <h3>Quick Links</h3>
-            <li>Jobs</li>
-            <li>Brand Assets</li>
-            <li>Investor Relations</li>
-            <li>Terms of Services</li>
+            <h3>Popular Course</h3>
+            <li>Literasi Bahasa</li>
+            <li>Kemampuan Kuantitatif</li>
+            <li>Penalaran Umum</li>
+            <li>JavaScript Beginners Courses</li>
+            <li>Penalaran Matematika</li>
+            <li>Ekonomi</li>
         </div>
         <div class="footer-col">
-            <h3>Features</h3>
-            <li>Power Tools</li>
-            <li>Managed Website</li>
-            <li>Maneged Website</li>
-            <li>Job Service</li>
+            <h3>Categories</h3>
+            <li>Tips UTBK</li>
+            <li>Materi UTBK</li>
+            <li>Jurusan UTBK</li>
+            <li>Konseling</li>
+            <li>Matematika</li>
+            <li>Fisika</li>
         </div>
         <div class="footer-col">
             <h3>Resources</h3>
@@ -100,12 +104,12 @@
 
         <div class="footer-col">
             <h3>Newsletter</h3>
-            <p>You can trust us. we only send promo offers, </p>
+            <p>Anda bisa percaya pada kami. Kami hanya mengirim penawaran promo.</p>
             <div class="subscribe">
-                <input type="text" placeholder="Your Email Address">
-                <a href="#" class="yellow">SUBSCRIBE</a>
+              <input type="email" placeholder="Alamat Email Anda" id="email" name="email">
+              <a href="#" class="yellow" onclick="subscribeNewsletter()">SUBSCRIBE</a>
             </div>
-        </div>
+          </div>
 
         <div class="copyright">
             <p>Copyright ©2023 All rights reserved | Edutech Company</p>
