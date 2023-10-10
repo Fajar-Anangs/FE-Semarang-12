@@ -314,3 +314,52 @@ input {
 .social-container a:hover {
   border: 1px solid #4bb6b7;
 }
+
+@media (min-width: 820px) {
+  .form-container {
+    /* Gaya untuk kontainer login di desktop */
+    /* Misalnya, width, warna latar belakang, dsb. */
+  }
+  .form-container form {
+    /* Gaya untuk form di desktop */
+  }
+  
+  /* Jika perlu menyesuaikan elemen-elemen lain di luar form pada desktop */
+  /* Contoh:
+  .form-container h1 {
+    Gaya untuk judul di desktop
+  }
+  */
+}
+
+@media (max-width: 480px) {
+  /* Menyembunyikan form registrasi */
+  .register-container {
+    display: none;
+  }
+
+  /* Menyesuaikan gaya untuk elemen-elemen di dalam form login pada tampilan responsif */
+  .login-container {
+    /* Gaya untuk kontainer login pada tampilan responsif */
+    /* Misalnya, width, warna latar belakang, dsb. */
+  }
+
+  /* Jika perlu menyesuaikan elemen-elemen di dalam form pada tampilan responsif */
+  .login-container form {
+    /* Gaya untuk form pada tampilan responsif */
+
+  }
+  .form {
+    margin: auto;
+  }
+
+  /* Jika perlu menyesuaikan elemen-elemen lain di luar form pada tampilan responsif */
+  /* Contoh:
+  .login-container h1 {
+    Gaya untuk judul pada tampilan responsif
+  }
+  */
+  .overlay-right {
+    display: none;
+  }
+}

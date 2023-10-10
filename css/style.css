@@ -80,7 +80,7 @@ nav .navigation ul li a{
   transition: 0.3s ease;
 }
 
-/* nav .navigation ul li a.active, */
+nav .navigation ul li a.active,
 
 nav .navigation ul li a:hover{
   color: #FDC93B;
@@ -231,42 +231,6 @@ nav .navigation ul li .daftar-btn:hover{
   gap: 2rem;
   margin-top: 50px;
 }
-
-#description .desc-img .desc-img-1 {
-  width: 60%;
-  height: auto;
-  margin: 50px 0px 0px 150px;
-}
-
-.desc-text{
-  margin: 0px 300px 0px 0px;
-}
-
-.desc-check .red{
-  width: 50px;
-  height: 50px;
-}
-
-.desc-check .red h6{
-  
-}
-
-.desc-check .yellow{
-  width: 50px;
-  height: 50px;
-}
-
-.desc-check .purple{
-  width: 50px;
-  height: 50px;
-}
-
-.desc-check .cyan{
-  width: 50px;
-  height: 50px;
-}
-
-
 
 /* features */
 #features{
@@ -596,6 +560,92 @@ nav .navigation ul li .daftar-btn:hover{
   border: 1px solid rgb(21, 21, 100);
   cursor: pointer;
 }
+
+/* pendataan */
+.pendataan {
+  display: flex;
+  align-items: center;
+  padding: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #ffffff;
+}
+
+/* Gaya untuk elemen .pendataan-text */
+.pendataan-text {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Gaya untuk elemen h1 dalam .pendataan-text */
+.pendataan-text h1 {
+  font-size: 32px;
+  font-weight: 100;
+  margin: 0;
+}
+
+/* Gaya untuk elemen p dalam .pendataan-text */
+.pendataan-text p {
+  font-size: 15px;
+  margin: 10px 0;
+  padding-bottom: 0px;
+}
+
+/* Media query untuk tampilan responsif ketika layar memiliki lebar maksimal 768px */
+@media (max-width: 768px) {
+  .pendataan {
+    padding: 150px 0;
+    padding-bottom: 200px;
+  }
+  .pendataan-text h1 {
+    font-size: 36px;
+  }
+  .pendataan-text p {
+    font-size: 14px;
+  }
+}
+
+/* Gaya untuk label dalam .form-pendataan */
+.form-pendataan label {
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Gaya untuk input, select, textarea dalam .form-pendataan */
+.form-pendataan input[type="text"],
+.form-pendataan input[type="email"],
+.form-pendataan textarea,
+.form-pendataan input[type="date"],
+.form-pendataan input[type="time"],
+.form-pendataan select[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 13px;
+}
+
+/* Gaya untuk tombol "Daftar" dalam .form-pendataan */
+.form-pendataan input[type="submit"] {
+  background-color: #fdbd58;
+  float: right;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Gaya saat tombol "Daftar" dihover */
+.form-pendataan input[type="submit"]:hover {
+  background-color: #fc9b00;
+}
+
 /* footer */
 
 footer{
@@ -1160,7 +1210,37 @@ footer .copyright .pro-links i:hover{
 }
 /* responsive */
 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
 
+.modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
 
 @media (max-width: 820px) {
   nav{
@@ -1202,6 +1282,11 @@ footer .copyright .pro-links i:hover{
   }
   nav .navigation ul li a{
     color: #fff;
+  }
+  nav .navigation ul li .login-btn {
+    color: #fff; /* Ini adalah properti yang akan ditampilkan pada tampilan responsif */
+    background-color: transparent; /* Misalnya, Anda dapat mengubah latar belakangnya menjadi transparan */
+    border: none; /* Menghilangkan garis batas */
   }
   
 /* home */

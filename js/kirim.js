@@ -91,3 +91,56 @@ function registerUser() {
       console.error('Error:', error);
     });
   }
+
+  // Event listener untuk form submission
+document.getElementById('kursusForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Mencegah form dikirim secara default
+  
+    // Lakukan permintaan POST ke server untuk pendaftaran kursus
+    // Setelah berhasil, tangkap tokenCourse dari respons dan tampilkan di popup modal
+    fetch('/api/course', {
+      method: 'POST',
+      body: JSON.stringify({
+        nama: document.getElementById('nama').value,
+        email: document.getElementById('email').value,
+        course: document.getElementById('kursus').value,
+        tanggal: document.getElementById('tanggal').value
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.token) {
+        // Jika tokenCourse ada dalam respons, tampilkan di popup modal
+        openModal(data.token);
+      } else {
+        // Handle kesalahan jika diperlukan
+        console.error('Gagal menerima tokenCourse dari server.');
+      }
+    })
+    .catch(error => {
+      // Handle kesalahan jika terjadi
+      console.error('Terjadi kesalahan dalam melakukan permintaan ke server:', error);
+    });
+  });
+  
+  // Fungsi untuk membuka modal
+  function openModal(generateToken) {
+    const modal = document.getElementById('generateTokenModal');
+    const generateTokenElement = document.getElementById('generateToken');
+  
+    generateTokenElement.textContent = generateToken;
+    modal.style.display = 'block';
+  }
+  
+  // Fungsi untuk menutup modal
+  function closeModal() {
+    const modal = document.getElementById('generateTokenModal');
+    modal.style.display = 'none';
+  }
+  
+  // Event listener untuk menutup modal saat tombol close diklik
+  document.querySelector('.close').addEventListener('click', closeModal);
+  

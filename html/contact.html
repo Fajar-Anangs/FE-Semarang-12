@@ -92,7 +92,7 @@
                         <textarea cols="30" rows="8" placeholder="How can we help?" id="pesan" name="pesan"></textarea>
                     </div>
                     <div class="form-col">
-                        <button type="submit" value="Send Message">Send Message</button>
+                        <button type="submit" value="Send Message" class="contact-submit">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -102,14 +102,19 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7596.152159778238!2d107.56592954035739!3d1.002675366364207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e13be41548c185%3A0xf7121c735abc1ad0!2sKUA%20Kecamatan%20Tambelan!5e0!3m2!1sid!2sid!4v1694414717786!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-
-        <!-- hero -->
-
-        <!-- contact -->
-
-        <!-- map -->
-
-        <!-- footer -->
+        <!-- Modal -->
+        <section id="modals">
+            <span class="overlay"></span>
+            <div class="modal-box">
+              <i class="fa-regular fa-circle-check"></i>
+              <h2>Completed</h2>
+              <h3>Pesan Anda Sudah Terkirm</h3>
+              <div class="buttons">
+                <button class="close-btn">Close</button>
+                <!-- <button>Open File</button> -->
+              </div>
+            </div>
+          </section>
         
         <footer>
             <div class="footer-col">
@@ -162,6 +167,20 @@
 
         <!-- <script src="../js/index.js"></script> -->
         <script src="../js/kirim.js"></script>
+        <script>
+        const section = document.querySelector("section")
+        const overlay = document.querySelector(".overlay")
+        const showBtn = document.querySelector(".contact-submit")
+        const closeBtn = document.querySelector(".close-btn");
+            showBtn.addEventListener("click", () => section.classList.add("active"));
+            overlay.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+            closeBtn.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+
+        </script>
 
 
     </body>

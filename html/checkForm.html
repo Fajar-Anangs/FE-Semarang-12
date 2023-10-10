@@ -27,32 +27,34 @@
 
     <section class="sectionp" id="pendataan">
         <div class="pendataan">
-            <div class="pendataan-text">
-                <h1>Form Pendaftaran Awal Pendaftaran Course di EduTBK</h1>
-                <p>Silahkan isi data yang diperlukan untuk memulai kursus Anda bersama EduTBK, kami akan cek data awal pendaftaran Anda dan mengubah status pendaftaran.</p>
-                <div class="form-pendataan">
-                    <form id="kursusForm" class="pendataan-con">
-                        <label for="nama">Nama:</label>
-                        <input type="text" id="nama" name="nama" placeholder="Ketikkan Nama Lengkap Anda" required><br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Ketikkan Email Anda" required><br><br>
-                        <label for="kursus">Pilihan Kursus:</label>
-                        <select id="kursus" type="text" name="kursus" required>
-                            <option value="Literasi Bahasa">--- Pilih Kursus yang Anda Minati ---</option>
-                            <option value="Literasi Bahasa">Literasi Bahasa</option>
-                            <option value="Kemampuan Kuantitatif">Kemampuan Kuantitatif</option>
-                            <option value="Penalaran Umum">Penalaran Umum</option>
-                            <option value="Penalaran Matematika">Penalaran Matematika</option>
-                            <option value="Ekonomi">Ekonomi</option>
-                            <option value="Javascript Beginner Course">Javascript Beginner Course</option>
-                        </select><br><br>
-                        <label for="tanggal">Tanggal:</label>
-                        <input type="date" id="tanggal" name="tanggal" required><br><br>
-                        <input type="submit" value="Daftar">
-                    </form>
-                </div>
+          <div class="pendataan-text">
+            <h1>Cek Status Pendaftaran Kursus EduTBK</h1>
+            <p>Silahkan isi kode pendatan berjumlah 10 karakter acak, untuk mengetahui status pendataan anda. </p>
+            <div class="form-pendataan">
+              <form id="kursusCek" class="pendataan-con">
+                <label for="kodependataan">Kode Pendataan Anda:</label>
+                <input type="text" id="kodependataan" name="kodependataan"><br><br>
+                <input type="submit" value="Cek Status" onclick="kursusCek(event)">
+                <p><i class="fa-solid fa-file"></i>&nbsp; Status Pendaftaran Kursus.</p>
+                <input type="text" id="status" name="status" readonly><br><br>
+                <p><i class="fa-solid fa-file"></i>&nbsp; Pilihan Kursus.</p>
+                <input type="hidden" id="idKursus" name="idKursus" />
+                <label for="judul">Pilihan Kursus:</label>
+                <input type="text" id="judul" name="judul" readonly><br><br>
+                <label for="judul">Keterangan Kursus:</label>
+                <textarea id="keterangan" name="keterangan" rows="5" cols="50" readonly></textarea>
+                <p><i class="fa-solid fa-file"></i>&nbsp; Data Diri Anda</p>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" readonly><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" readonly><br><br>
+                <label for="pesan">Pesan:</label><br>
+                <textarea id="pesan" name="pesan" rows="5" cols="50" readonly></textarea><br><br>
+              </form>
             </div>
+          </div>
         </div>
+      </section>
         
         <!-- Modal Course -->
         <div class="modal" id="generateTokenModal">
